@@ -4,8 +4,11 @@
   "description": "plan a fun vaycay to nyc",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": ""
+    "test": "",
+    "start:production": "node app.js",
+    "start:dev": "nodemon -e html,css,js app.js",
+    "start": "npm run start:dev"
+  
   },
   "keywords": [
     "fun",
@@ -25,6 +28,10 @@
     "nunjucks-autoescape": "^1.0.1",
     "pg": "^6.1.4",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^3.30.2"
+    "sequelize": "^3.30.2",
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0"
   }
 }

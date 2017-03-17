@@ -1,0 +1,25 @@
+<!-- <body>
+<p>Hello world</p>
+</body> -->
+
+{% block content %}
+<p>Hotels:</p>
+	<select>
+		{% for hotel in templateHotels %}
+		<option>{{ hotel.name }}</option>
+		{% endfor %}
+	</select>
+<p>Restaurants:</p>
+	<select>
+		{% for restaurant in templateRestaurants %}
+		<option>{{ restaurant.name }}</option>
+		{% endfor %}
+	</select>
+<p>Activities:</p>
+	<select>
+		{% for activity in templateActivities %}
+		<option>{{ activity.name }}</option>
+		{% endfor %}
+	</select>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{
+  "name": "tripplanner",
+  "description": "plan a fun vaycay to nyc",
+  "main": "app.js",
+  "authors": [
+    "elsa and sarah"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "fun",
+    "fullstack",
+    "nyc",
+    "js"
+  ],
+  "homepage": "https://github.com/sarahdherr/1702-tp-static",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -3,11 +3,14 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var nunjucks = require('nunjucks');
-var models = require('./models/db');
+var models = require('./models');
+var router = require('./routes');
 
 var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bootstrap', express.static(path.join(__dirname, 'bower_components/bootstrap/dist')));
+app.use('/jquery', express.static(path.join(__dirname, 'bower_components/jquery/dist')));
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
@@ -19,6 +22,8 @@ var env = nunjucks.configure('views', {noCache: true});
 
 var AutoEscapeExtension = require('nunjucks-autoescape')(nunjucks);
 env.addExtension('AutoEscapeExtension', new AutoEscapeExtension(env));
+
+app.use('/', router);
 
 
 // catch 404 (i.e., no route was hit) and forward to error handler
